@@ -61,7 +61,7 @@ def insert_row_into_events_enriched(event):
 
     # Set up bigquery instance
     client = bigquery.Client()
-    dataset_id = "dataset_id"
+    dataset_id = "data-320023.dora_islam"
     table_id = "events_enriched"
 
     if is_unique(client, event["events_raw_signature"]):
