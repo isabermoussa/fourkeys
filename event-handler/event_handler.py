@@ -34,6 +34,7 @@ def index():
     """
 
     print("Received request with body: ", request.data)
+    print("Received request with headers: ", request.headers)
 
     # Check if the source is authorized
     source = sources.get_source(request.headers)
