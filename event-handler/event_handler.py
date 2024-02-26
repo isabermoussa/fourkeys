@@ -33,6 +33,8 @@ def index():
     checks if the signature is verified, and then sends the data to Pub/Sub.
     """
 
+    print("Received request with body: ", request.data)
+
     # Check if the source is authorized
     source = sources.get_source(request.headers)
 
