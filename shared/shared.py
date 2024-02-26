@@ -23,7 +23,7 @@ def insert_row_into_bigquery(event):
 
     # Set up bigquery instance
     client = bigquery.Client()
-    dataset_id = "four_keys"
+    dataset_id = "data-320023.dora_islam"
     table_id = "events_raw"
 
     if is_unique(client, event["signature"]):
@@ -61,7 +61,7 @@ def insert_row_into_events_enriched(event):
 
     # Set up bigquery instance
     client = bigquery.Client()
-    dataset_id = "four_keys"
+    dataset_id = "dataset_id"
     table_id = "events_enriched"
 
     if is_unique(client, event["events_raw_signature"]):
